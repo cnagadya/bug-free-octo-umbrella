@@ -45,6 +45,8 @@ GEM
     activerecord (6.0.4.8)
       activemodel (= 6.0.4.8)
       activesupport (= 6.0.4.8)
+    activerecord-import (1.0.2)
+      activerecord (>= 3.2)
     activestorage (6.0.4.8)
       actionpack (= 6.0.4.8)
       activejob (= 6.0.4.8)
@@ -136,8 +138,10 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.2.1)
     thread_safe (0.3.6)
-    trilogy (2.1.1)
-    trilogy_adapter (0.1.0)
+    trilogy (1.0.2)
+    trilogy_adapter (1.0.0.gb5890be)
+      activerecord (>= 5.2)
+      trilogy (~> 1.0.0)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
     websocket-driver (0.7.5)
@@ -149,6 +153,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-import (= 1.0.2)
   bootsnap (>= 1.4.2)
   byebug
   graphql (= 1.13.14)
@@ -157,8 +162,8 @@ DEPENDENCIES
   rails (= 6.0.4.8)
   spring
   spring-watcher-listen (~> 2.0.0)
-  trilogy
-  trilogy_adapter
+  trilogy (= 1.0.2)
+  trilogy_adapter (= 1.0.0.gb5890be)
   tzinfo-data
 
 RUBY VERSION

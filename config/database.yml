@@ -20,7 +20,7 @@ default: &default
 development:
   primary: &dev
     <<: *default
-    database: db/development.sqlite3
+    database: db/development
   reading:
     <<: *dev
     replica: true
@@ -32,7 +32,7 @@ development:
 test:
   primary: &test_db
     <<: *default
-    database: db/test.sqlite3
+    database: db/test
   reading:
     <<: *test_db
     replica: true
@@ -60,7 +60,7 @@ test:
 production:
   primary: &prod
     <<: *default
-    database: db/production.sqlite3
+    database: db/production
   reading:
     <<: *prod
     replica: true

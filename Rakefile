@@ -3,4 +3,6 @@
 
 require_relative 'config/application'
 
+ActiveRecord::Tasks::DatabaseTasks.register_task(/trilogy/, ActiveRecord::Tasks::MySQLDatabaseTasks)
+
 Rails.application.load_tasks
