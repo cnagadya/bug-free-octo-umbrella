@@ -14,13 +14,13 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
-  host: localhost
+  password: root
+  host: 127.0.0.1
 
 development:
   primary: &dev
     <<: *default
-    database: db/development
+    database: app_development
   reading:
     <<: *dev
     replica: true
@@ -32,7 +32,7 @@ development:
 test:
   primary: &test_db
     <<: *default
-    database: db/test
+    database: app_test
   reading:
     <<: *test_db
     replica: true
@@ -60,7 +60,7 @@ test:
 production:
   primary: &prod
     <<: *default
-    database: db/production
+    database: app_prod
   reading:
     <<: *prod
     replica: true
